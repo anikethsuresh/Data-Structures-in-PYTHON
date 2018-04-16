@@ -4,8 +4,6 @@ class Element:
 		self.value=value
 		self.elementBelow=None
 
-class Stack:                     #Each Element object is added to Stack Object which maintains
-	size=5                       #top and size of the Stack
 
 #Each Element object is added to Stack Object which maintains
 class Stack:
