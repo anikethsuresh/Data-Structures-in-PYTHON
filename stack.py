@@ -1,14 +1,21 @@
-class Element:                   #Each Element is of class Element
+#Each Element is of class Element
+class Element:                   
 	def __init__(self,value):
 		self.value=value
 		self.elementBelow=None
 
 class Stack:                     #Each Element object is added to Stack Object which maintains
 	size=5                       #top and size of the Stack
+
+#Each Element object is added to Stack Object which maintains
+class Stack:
+	#top and size of the Stack                     
+	size=5                       
 	numOfElements=0
 	top=None
 
-	def push(self,stackElement): #Add an element operation
+	#Add an element operation
+	def push(self,stackElement): 
 		if Stack.numOfElements == Stack.size:
 			print("Cannot add anymore elements ", "Stack FULL")
 			return
@@ -20,7 +27,8 @@ class Stack:                     #Each Element object is added to Stack Object w
 			stackElement.elementBelow=self.top
 			self.top=stackElement
 
-	def pop(self):               #Remove an element operation
+	#Remove an element operation
+	def pop(self):               
 		if(Stack.isEmpty(self)):
 			print("Cannot perform pop operation ", "Stack EMPTY")
 			return
@@ -31,7 +39,9 @@ class Stack:                     #Each Element object is added to Stack Object w
 		print("Remaining Number of Elements :", Stack.numOfElements)
 		del toBePopped
 
-	def peak(self):              #Check the top element operation
+
+	#Check the top element operation
+	def peak(self):              
 		if(Stack.isEmpty()):
 			print("Stack EMPTY")
 			return
