@@ -32,12 +32,10 @@ class Queue:
 			Queue.size-=1
 		else:
 			current=self.first
-			while(current.connectedTo!=self.last):
-				current=current.connectedTo
-			deleteThis=self.last
-			del deleteThis
+			self.first = self.first.connectedTo
+			current.value = None
 			current.connectedTo=None
-			self.last=current
+			del current
 			Queue.size-=1
 
 	def printQueue(self):
@@ -46,6 +44,12 @@ class Queue:
 			print(current.value,"-> ",end="")
 			current=current.connectedTo
 		print("END")
+
+	def sizeOfQueue(self):
+		return Queue.size
+
+	def firstInQueue(self):
+		return self.first.value
 
 
 element1=Element(1)
