@@ -11,6 +11,5 @@ def selection_sort(items):
 			items[i], items[largest] = items[largest], items[i]
 	print(items)
 
-
 items = [9,8,7,6,5,4,3,2,1]
 selection_sort(items)
