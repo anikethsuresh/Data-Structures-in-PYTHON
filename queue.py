@@ -27,16 +27,17 @@ class Queue:
 			print("Empty Queue")
 			return
 		elif Queue.size==1:
+			current=self.first
 			self.first=None
 			self.last=None
 			Queue.size-=1
+			return current
 		else:
 			current=self.first
 			self.first = self.first.connectedTo
-			current.value = None
 			current.connectedTo=None
-			del current
 			Queue.size-=1
+			return current
 
 	def printQueue(self):
 		current=self.first
@@ -52,21 +53,24 @@ class Queue:
 		return self.first.value
 
 
-element1=Element(1)
-element2=Element(2)
-element3=Element(3)
 
-myQueue = Queue()
-myQueue.Enqueue(element1)
-myQueue.Enqueue(element2)
-myQueue.Enqueue(element3)
+if __name__ == '__main__':
+	element1=Element(1)
+	element2=Element(2)
+	element3=Element(3)
 
-myQueue.printQueue()
+	myQueue = Queue()
+	myQueue.Enqueue(element1)
+	myQueue.Enqueue(element2)
+	myQueue.Enqueue(element3)
 
-myQueue.Dequeue()
-myQueue.printQueue()
-myQueue.Dequeue()
-myQueue.printQueue()
-myQueue.Dequeue()
+	myQueue.printQueue()
 
-myQueue.Dequeue()
+	myQueue.Dequeue()
+	myQueue.printQueue()
+	myQueue.Dequeue()
+	myQueue.printQueue()
+	myQueue.Dequeue()
+
+	myQueue.Dequeue()
+
