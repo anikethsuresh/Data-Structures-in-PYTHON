@@ -53,7 +53,6 @@ class Queue:
 		return self.first.value
 
 
-
 if __name__ == '__main__':
 	element1=Element(1)
 	element2=Element(2)
